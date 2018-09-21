@@ -1,4 +1,3 @@
-'use strict'
 const nodemailer = require('nodemailer')
 const sendUserEmail = (mailOptions) => {
     return new Promise((resolve, reject) => {

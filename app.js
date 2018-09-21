@@ -40,8 +40,13 @@ app.post('/email', (req, res) => {
             res.status(200).send(data)
         })
         .catch((error) => {
+            console.log('---->>  logging...\n', error)
             res.status(401).send(error)
         })
+})
+
+app.use('*', (req, res, next, error) => {
+    res.status(504).send(error)
 })
 
 module.exports = app
