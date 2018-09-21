@@ -38,11 +38,9 @@ app.post('/email', (req, res) => {
     }
     sendUserEmail(mailOptions)
         .then((data) => {
-            console.log('---->>  <PASS></PASS>...\n', data)
             res.status(200).send(data)
         })
         .catch((error) => {
-            console.log('---->>  logging...\n', error)
             res.status(401).send(error)
         })
 })
