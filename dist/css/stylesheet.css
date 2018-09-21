@@ -1,0 +1,146 @@
+/**************************\
+    #CLASSES
+\**************************/
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input__email {
+    padding: 1.2rem;
+}
+
+.button {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 2rem;
+    border: 1px solid #dbd3b8;
+    color: #dbd3b8;
+    background-color: #3d3d3b;
+    letter-spacing: 3px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.button:hover {
+    color: #3d3d3b;
+    background: #dbd3b8;
+    border: 1px solid #3d3d3b;
+    letter-spacing: 3px
+}
+
+/*=========================*\
+  #RESET
+\*=========================*/
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    background-color: #3c3c3b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul,
+menu,
+dir {
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+textarea,
+select,
+input {
+    background-color: #fff;
+    border: 1px #ccc solid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-margin-before: 0.1em;
+    -webkit-margin-after: 0.1em;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 1.9rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+}
+
+h6 {
+    font-size: 1.3rem;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
+
+fieldset {
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* @media only screen and (max-width: 820px) {
+    #video {
+        min-width: 280px;
+        width: 90%;
+    }
+        height: 240px;
+    .section__about {
+        padding: 0 0.2rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 820px) and (orientation: landscape) {} */

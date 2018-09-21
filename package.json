@@ -1,0 +1,16 @@
+{
+  "name": "google-form-server",
+  "version": "1.0.0",
+  "description": "A simple form handler server to send emails-",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Ramirez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "nodemailer": "^4.6.8"
+  }
+}
