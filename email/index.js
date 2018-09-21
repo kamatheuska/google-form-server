@@ -2,24 +2,25 @@
 const nodemailer = require('nodemailer')
 const sendUserEmail = (mailOptions) => {
     return new Promise((resolve, reject) => {
-        // let transporter = nodemailer.createTransport({
-        //     host: 'smtp.ethereal.com',
-        //     port: 587,
-        //     secure: false, // true for 465, false for other ports
-        // })
-        // // send mail with defined transport object
-        nodemailer.createTransport({
-            sendmail: true,
-            newline: 'unix',
-            path: '/usr/sbin/sendmail'
-        });
+        let smtpConfig = {
+            host: 'smtp.matizbcn.com',
+            port: 578,
+            secure: false, // upgrade later with STARTTLS
+            auth: {
+                user: process.env.MAIL,
+                pass: process.env.PASS
+            },
+            tls: {
+                rejectUnauthorized: false
+            }
+        }
+        let transporter = nodemailer.createTransport(smtpConfig);
 
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
                 reject(error)
             } else {
-                console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
-                resolve(info.messageId)
+                resolve(info)
             }
         })
     })

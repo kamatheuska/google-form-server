@@ -29,12 +29,11 @@ app.get('/', (req, res) => {
 
 app.post('/email', (req, res) => {
     let { name, email, text } = req.body
-    // setup email data with unicode symbols
     let mailOptions = {
         from: `${ name } <${ email }>`, // sender address
-        to: 'nico9017@gmail.com', // list of receivers
+        to: 'nico9017@gmail.com, m@matizbcn.com', // list of receivers
         subject: 'Product info', // Subject line
-        text: `${ text }` // plain text body
+        text: `Email de Google: ${ text }` // plain text body
     }
     sendUserEmail(mailOptions)
         .then((data) => {
